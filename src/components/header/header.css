@@ -1,0 +1,83 @@
+.container{
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 1rem 0;
+    background-color: white;
+    box-shadow: .5px .5px 2px #E0DECA;
+    z-index: 999;
+}
+
+header ul{
+    list-style: none;
+    display: flex;
+}
+
+.menu-left li{
+    padding: .7rem .7rem;
+    color: #3e3e3e;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+header li:hover{
+    color: #9EB23B;
+}
+
+header img{
+    width: clamp(3rem, 9vw, 5rem);
+    height: clamp(1rem ,8vh, 4rem);
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-left,
+.menu-right{
+    display: flex;
+    align-items: center;
+}
+
+#register{
+    color: #9EB23B;
+    font-size: clamp(.9rem ,1.1vw, 2rem);
+    padding: clamp(.5rem, 1vw, .7rem);
+}
+
+#register:hover{
+    color: #C7D36F;
+}
+
+#login{
+    background-color: #9EB23B;
+    color: white;
+    font-size: clamp(.9rem, 1.1vw, 2rem);
+    padding: clamp(.5rem, 1vw, .7rem);
+    border-radius: 5px;
+}
+
+#login:hover{
+    background-color: #C7D36F;
+}
+
+.menu-right h2{
+    color: #9EB23B;
+    margin: 0;
+    font-size: clamp(.9rem, 1.5vw, 3rem);
+}
+
+@media screen and (max-width: 585px){
+    header img{
+        width: clamp(3rem, 9vw, 5rem);
+        height: clamp(.5rem ,6vh, 4rem);
+    }
+} 

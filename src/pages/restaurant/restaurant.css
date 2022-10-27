@@ -1,0 +1,221 @@
+.restaurant-single-banner{
+    display: inline-block;
+    width: 90%;
+    margin-left: 5%;
+    height: clamp(100px, 35vh, 250px);
+    border-radius: 10px;
+    background-size: 100%;
+    background-position-y: center;
+    margin-top: 8rem;
+}
+
+.restaurant-single-info{
+    margin-top: 1rem;
+}
+
+.upper{
+    display: flex;
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #E0DECA;
+}
+
+.upper-left{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: flex-start;
+}
+
+.restaurant-avatar{
+    display: inline-block;
+    width: clamp(3.8rem, 7vw, 5rem);
+    height: clamp(3.8rem, 7vw, 5rem);
+    border-radius: 50%;
+    background-size: 100% 100%;
+}
+
+.upper-left h1{
+    font-size: clamp(1.4rem ,2.5vw, 3rem);
+    margin-left: 10px;
+    color: #3f3e3e;
+}
+
+.upper-right{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: flex-end;
+    color: #a6a6a5;
+}
+
+.upper-right span{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.upper-right span h3{
+    color: #fcbb00;
+    font-size: clamp(.8rem, 1.5vw, 1rem);
+}
+
+.upper-right p{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    font-size: clamp(.8rem, 1.5vw, 1rem);
+}
+
+.restaurant-single-menu-category{
+    margin-bottom: 30px;
+}
+
+.restaurant-single-menu-category h2{
+    color: #3f3e3e;
+    font-size: clamp(1.2rem ,2vw, 2.8rem);
+}
+
+.menu-item-box-img{
+    width: auto;
+    max-width: 30%;
+    height: auto;
+    max-height: 140px;
+    margin-left: auto;
+}
+
+.item-box-description h3{
+    color: #3e3e3e;
+    font-size: clamp(1rem, 1.3vw, 2rem);
+    line-height: 1.25rem;
+    margin-top: 0;
+}
+
+.item-box-description h4{
+    color: #3e3e3e;
+    font-size: clamp(.9rem, 1.4vw, 1.8rem);
+    font-weight: normal;
+    margin: 0;
+}
+
+.item-box-description h5{
+    color: #3e3e3e;
+    font-size: clamp(.7rem, 1vw, 1.5rem);
+}
+
+.product-price{
+    display: flex;
+    align-items: flex-start;
+}
+
+#scratched-price{
+    text-decoration: line-through #3e3e3e solid 1px;
+    margin: 0 0 0 5px;
+    font-weight: normal;
+}
+
+#promo-price{
+    color: #9EB23B;
+}
+
+.item-box-description p{
+    color: #717171;
+    font-size: clamp(.7rem, 1vw, 1.5rem);
+    line-height: 1.25rem;
+}
+
+.dishPage-img{
+    width: auto;
+    max-width: 50%;
+    height: auto;
+    max-height: 200px;
+    margin-top: 10%;
+}
+
+.dishPage-content{
+    margin-top: 10%;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-buttons{
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.product-buttons h3{
+    color: #3e3e3e;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.dish-product-price{
+    margin: 10px 0;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #9EB23B;
+    border-radius: 10px;
+}
+
+.dish-product-price h4{
+    width: fit-content;
+    margin: 0;
+    color: white;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 767px){
+    .restaurant-single-banner{
+        height: 20vh;
+        margin-top: 6rem;
+        width: 100%;
+        margin-left: 0;
+        border-radius: 0;
+    }
+
+    .menu-item-box{
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 585px){
+    .upper{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 10px;
+        margin-bottom: 40px;
+        border-bottom: 1px solid #E0DECA;
+    }
+
+    .upper-left{
+        width: 100%;
+    }
+
+    .upper-right{
+        width: 100%;
+        flex-direction: row-reverse;
+    }
+
+    .upper-right span{
+        margin-right: 0;
+        margin-left: 10px;
+    }
+
+    .upper-right p{
+        margin-left: 0;
+        margin-right: 10px;
+    }
+
+    .button-dishes{
+        border-top: 1px solid #f2f2f2;
+        border-bottom: 1px solid #f2f2f2;
+        border-left: none;
+        border-right: none;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 10px 0;
+    }
+}

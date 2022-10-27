@@ -1,0 +1,45 @@
+.cart-container{
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.products-table{
+    flex: 8;
+}
+
+.order-section{
+    flex: 4;
+    margin-left: 2%;
+    margin-top: 10rem;
+}
+
+.order-summary{
+    border: 1px solid #ccc;
+}
+
+.order-summary h4{
+    margin: 0;
+    padding: 10px 15px;
+    color: #3e3e3e;
+}
+
+.order-info{
+    padding: 10px 15px;
+}
+
+.order-total{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    background-color: #E0DECA;
+    border-top: 1px solid #afae9d;
+    color: #3e3e3e;
+    padding: 10px 15px;
+}
+
+.order-info-single{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}

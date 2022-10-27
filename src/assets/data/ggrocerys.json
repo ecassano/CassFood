@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Walmart",
+        "logo": "./grimages/walmartlogo.jpeg"
+    },
+    {
+        "name": "Publix",
+        "logo": "./grimages/publixlogo.jpeg"
+    },
+    {
+        "name": "Whole Foods",
+        "logo": "./grimages/wholefoodslogo.png"
+    },
+    {
+        "name": "Target",
+        "logo": "./grimages/targetlogo.jpeg"
+    },
+    {
+        "name": "Fresh Fields Farm",
+        "logo": "./grimages/freshfieldslogo.jpeg"
+    }
+]

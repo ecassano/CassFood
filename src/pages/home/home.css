@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+*{
+    font-family: 'Lato';
+}
+
+.container{
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.first-section{
+    margin-top: 12rem;
+    border-bottom: 2px solid #E0DECA;
+}
+
+.first-section h1{
+    width: fit-content;
+    font-size: clamp(1.4rem, 2.5vw, 5rem);
+    margin: 0 auto .5rem auto;
+    color: #3f3e3e;
+}
+
+.first-section p{
+    width: fit-content;
+    font-size: clamp(.8rem, 1.2vw, 1.5rem);
+    color: #717171;
+    margin: 0 auto 2rem auto;
+    text-align: center;
+}
+
+.first-section .span-input{
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.first-section .span-input input{
+    border-style: solid;
+    border-left: none;
+    width: 45%;
+    padding: .7rem 0 .7rem 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-color: #E0DECA;
+    outline: none;
+}
+
+.first-section .span-input input::placeholder{
+    color: #a6a6a6;
+}
+
+#icon{
+    width: 5%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    border-right: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-color: #E0DECA;
+}
+
+.boxes{
+   margin: 3rem 0 5rem 0;
+   display: flex;
+   justify-content: center;
+}
+
+.box{
+    width: 28%;
+    padding: 2rem 1rem;
+    border-radius: 20px;
+    margin: 0 1%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    cursor: pointer;
+}
+
+.box:hover{
+    transition: all .1s ease-in;
+    transform: scale(1.03);
+    box-shadow: 1px 1px 5px rgb(150, 150, 150);
+}
+
+.box:first-child{
+    background-color: #9EB23B;
+}
+
+.box:last-child{
+    background-color: #E0DECA;
+}
+
+.box h2{
+    font-size: clamp(1rem, 2vw, 1.8rem);
+    color: white;
+    margin: 0 1rem;
+}
+
+.box img{
+    width: clamp(90px, 12vw, 200px);
+    height: clamp(50px, 9vw, 150px);
+    position: absolute;
+    z-index: 1;
+    left: calc((100% - clamp(100px, 12vw, 200px) - 5%));
+    bottom: clamp(.5rem ,1vh, 1rem);
+}
+
+.second-section{
+    border-bottom: 2px solid #E0DECA;
+}
+
+.promo-banners{
+    margin-top: clamp(1rem, 10vh, 4rem);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+}
+
+.promo-banner-single{
+    display: inline-block;
+    width: 32%;
+    margin: 0 auto;
+    height: clamp(120px, 30vh, 200px);
+    border-radius: 5px;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+
+.promo-banner-single:hover{
+    transition: .3s all;
+    transform: scale(1.05);
+}
+
+.second-section h3,
+.third-section h3{
+    margin-top: clamp(2rem, 15vh, 3.5rem);
+    margin-bottom: clamp(1rem, 5vh, 2rem);
+    color: #3f3e3e;
+}
+
+.work-ilustrations{
+    margin-top: clamp(1rem, 10vh, 4rem);
+    margin-bottom: clamp(1rem, 5vh, 2rem);
+    display: flex;
+    justify-content: space-around;
+}
+
+.work-ilustrations-single{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px 0;
+}
+
+.work-ilustrations-single p{
+    margin-top: 0;
+    color: #717171;
+    text-align: center;
+    font-size: clamp(.9rem, 1.2vw, 1.2rem);
+}
+
+.work-ilustrations-single h3{
+    margin-top: 0;
+    text-align: center;
+    color: #3f3e3e;
+}
+
+.work-ilustrations img{
+    width: clamp(150px, 20vw, 300px);
+    height: clamp(150px, 20vw, 250px);
+    margin: 20px 0;
+}
+
+@media screen and (max-width: 992px) {
+    .first-section{
+        margin-top: 10rem;
+    }
+
+    .box img{
+        position: relative;
+        left: auto;
+        bottom: auto;
+        margin: 10px 0 0 0;
+    }
+
+    .box{
+        align-items: center;
+        padding: 1rem .75rem;
+    }
+
+    .box .css-1x05bby-MuiButtonBase-root-MuiButton-root{
+        margin: 20px 0 5px 0;
+        font-size: smaller;
+    }
+
+    .promo-banner-single{
+        display: block;
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .promo-banners{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .work-ilustrations{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 580px){
+    .first-section{
+        margin-top: 9rem;
+    }
+
+    .boxes{
+        margin: 2rem 0 3rem 0;
+     }
+
+    .box .css-1x05bby-MuiButtonBase-root-MuiButton-root{
+        margin: 20px 0 5px 0;
+        font-size: x-small;
+    }
+
+    .promo-banners{
+        margin-bottom: 3rem;
+    }
+
+    h3{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 475px){
+    .promo-banner-single{
+        height: 9rem;
+    }
+}

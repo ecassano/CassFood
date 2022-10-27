@@ -1,0 +1,25 @@
+#logo-login{
+    width: clamp(5rem, 9vw, 5rem);
+    height: clamp(2rem ,9vh, 4rem);
+    position: absolute;
+    left: 2.5%;
+    top: 2.5%;
+}
+
+#ilustration-register{
+    height: 100vh;
+}
+
+@media screen and (max-width: 899px){
+    .leftSide{
+        display: none;
+    }
+
+    #logo-login{
+        position: relative;
+    }
+
+    .css-mhc70k-MuiGrid-root{
+        align-items: flex-start !important;
+    }
+}
