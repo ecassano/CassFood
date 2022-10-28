@@ -1,5 +1,5 @@
 import "./App.css";
-import { lazy, Suspense, useEffect, createContext } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { CircularProgress } from "@mui/material";
 import dataRests from "./assets/data/grests.json";
@@ -34,6 +34,11 @@ const Restaurant = lazy(() => {
     resolve(import("./pages/restaurant/Restaurant"));
   });
 });
+const NotFound = lazy(() => {
+  return new Promise((resolve) => {
+    resolve(import("./pages/notfound/NotFound"));
+  });
+});
 
 function App() {
   return (
@@ -57,6 +62,7 @@ function App() {
           <Route exact path="/register" element={<Register />} />
           <Route exact path="/cart" element={<Cart />} />
           <Route exact path="/checkout" element={<Checkout />} />
+          <Route exact path="*" element={<NotFound />} />
           <Route
             exact
             path="/cassfoodwendys"
