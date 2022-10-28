@@ -14,6 +14,8 @@ import Button from "@mui/material/Button";
 import ClearIcon from "@mui/icons-material/Clear";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import { Link } from "react-router-dom";
 
 function CartItem({ i, product, img, price, qtd, setUpdate }) {
   const [updateNumber, setUpdateNumber] = useState(0);
@@ -181,6 +183,58 @@ export default function Cart() {
   return (
     <>
       <Header />
+      <ul
+        id="links-cart"
+        style={{
+          padding: 0,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Link to="/" style={{ textDecoration: "none", color: "#717171" }}>
+          <li className="header-links" style={{ listStyle: "none" }}>
+            Back to shop
+          </li>
+        </Link>
+        <ArrowForwardIosIcon
+          sx={{
+            fontSize: "clamp(.8rem ,1.2vw, 2rem)",
+            color: "#717171",
+            margin: "0 5px",
+          }}
+        />
+        <Link
+          to="/cart"
+          style={{
+            textDecoration: "none",
+            color: "#3e3e3e",
+            fontWeight: "bold",
+          }}
+        >
+          <li className="header-links" style={{ listStyle: "none" }}>
+            Review Cart
+          </li>
+        </Link>
+        <ArrowForwardIosIcon
+          sx={{
+            fontSize: "clamp(.8rem ,1.2vw, 2rem)",
+            color: "#717171",
+            margin: "0 5px",
+          }}
+        />
+        <Link
+          to="/checkout"
+          style={{
+            textDecoration: "none",
+            color: "#717171",
+          }}
+        >
+          <li className="header-links" style={{ listStyle: "none" }}>
+            Checkout
+          </li>
+        </Link>
+      </ul>
       <div className="cart-container">
         <div className="products-table">
           <TableContainer>

@@ -4,14 +4,23 @@
     display: flex;
 }
 
+#links-cart{
+    margin-top: 10rem;
+}
+
+.header-links{
+    font-size: clamp(.9rem ,1.2vw, 2rem);
+    min-width: 45px;
+}
+
 .products-table{
     flex: 8;
-    margin: 10rem 0 1rem 0;
+    margin: 1rem 0 1rem 0;
 }
 
 .order-section{
     flex: 4;
-    margin: 10rem 0 1rem 2%;
+    margin: 1rem 0 1rem 2%;
 }
 
 .order-summary{
@@ -55,14 +64,22 @@
         flex-direction: column;
     }
 
+    .products-table{
+        margin: 1rem 0 1rem 0;
+    }
+
     .order-section{
         margin: 1rem 0 1rem 0;
+    }
+
+    #links-cart{
+        margin-top: 8rem;
     }
 }
 
 @media screen and (max-width: 992px){
     .products-table{
-        margin: 7rem 0 1rem 0;
+        margin: 1rem 0 1rem 0;
     }
 }
 
@@ -71,5 +88,9 @@
         margin-right: 10px; 
         height: 40px; 
         width: 60px
+    }
+
+    #links-cart{
+        margin-top: 7rem;
     }
 }
