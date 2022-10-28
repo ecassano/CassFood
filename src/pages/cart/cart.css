@@ -6,12 +6,12 @@
 
 .products-table{
     flex: 8;
+    margin: 10rem 0 1rem 0;
 }
 
 .order-section{
     flex: 4;
-    margin-left: 2%;
-    margin-top: 10rem;
+    margin: 10rem 0 1rem 2%;
 }
 
 .order-summary{
@@ -42,4 +42,34 @@
     display: flex;
     justify-content: space-between;
     margin: 10px 0;
+}
+
+.table-rows img{
+    margin-right: 10px; 
+    height: 50px; 
+    width: 70px
+}
+
+@media screen and (max-width: 1215px){
+    .cart-container{
+        flex-direction: column;
+    }
+
+    .order-section{
+        margin: 1rem 0 1rem 0;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .products-table{
+        margin: 7rem 0 1rem 0;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .table-rows img{
+        margin-right: 10px; 
+        height: 40px; 
+        width: 60px
+    }
 }

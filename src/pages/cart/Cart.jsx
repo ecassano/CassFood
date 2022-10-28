@@ -4,9 +4,10 @@ import Header from "../../components/header/Header";
 import Footer from "../../components/footer/footer";
 import { verifyLogin } from "../../auth/auth";
 import { useState, useEffect } from "react";
+import { TableContainer } from "@mui/material";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
-import TableCell, { tableCellClasses } from "@mui/material/TableCell";
+import TableCell from "@mui/material/TableCell";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Button from "@mui/material/Button";
@@ -15,23 +16,45 @@ import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 
 function CartItem({ i, product, img, price, qtd }) {
+  const [dimensions, setDimensions] = useState(window.innerWidth);
+
+  useEffect(() => {
+    function handleResize() {
+      setDimensions(window.innerWidth);
+    }
+
+    window.addEventListener("resize", handleResize);
+  }, [dimensions]);
+
   const [counter, setCounter] = useState(qtd);
 
   if (counter > 0) {
     return (
-      <TableRow className="table-rows">
-        <TableCell>
-          <div style={{ display: "flex", alignItems: "center" }}>
-            <img
-              src={img}
-              alt={product}
-              style={{ marginRight: "10px", height: "50px", width: "70px" }}
-            />
-            {product}
+      <TableRow className="table-rows" sx={{ overflowX: "auto" }}>
+        <TableCell sx={{ minWidth: "200px" }}>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              fontSize: "clamp(.8rem ,1vw, 1rem)",
+            }}
+          >
+            <img src={img} alt={product} />
+            {dimensions > 794
+              ? product.length > 34
+                ? `${product.substring(0, 34)}...`
+                : product
+              : product.length > 20
+              ? `${product.substring(0, 20)}...`
+              : product}
           </div>
         </TableCell>
-        <TableCell>$ {price}</TableCell>
-        <TableCell>
+        <TableCell
+          sx={{ fontSize: "clamp(.8rem, 1vw, 2rem)", minWidth: "50px" }}
+        >
+          $ {price}
+        </TableCell>
+        <TableCell sx={{ minWidth: "80px" }}>
           <Button
             sx={[
               {
@@ -61,7 +84,9 @@ function CartItem({ i, product, img, price, qtd }) {
               window.location.reload();
             }}
           >
-            <RemoveIcon sx={{ color: "white" }} />
+            <RemoveIcon
+              sx={{ color: "white", fontSize: "clamp(1rem, 1.5vw, 2rem)" }}
+            />
           </Button>
           {counter}
           <Button
@@ -93,10 +118,16 @@ function CartItem({ i, product, img, price, qtd }) {
               window.location.reload();
             }}
           >
-            <AddIcon sx={{ color: "white" }} />
+            <AddIcon
+              sx={{ color: "white", fontSize: "clamp(1rem, 1.5vw, 2rem)" }}
+            />
           </Button>
         </TableCell>
-        <TableCell>$ {price * counter}</TableCell>
+        <TableCell
+          sx={{ fontSize: "clamp(.8rem, 1vw, 2rem)", minWidth: "50px" }}
+        >
+          $ {price * counter}
+        </TableCell>
         <TableCell>
           <Button
             sx={[
@@ -115,7 +146,9 @@ function CartItem({ i, product, img, price, qtd }) {
               window.location.reload();
             }}
           >
-            <ClearIcon sx={{ color: "#9EB23B" }} />
+            <ClearIcon
+              sx={{ color: "#9EB23B", fontSize: "clamp(1rem, 1.5vw, 2rem)" }}
+            />
           </Button>
         </TableCell>
       </TableRow>
@@ -135,57 +168,67 @@ export default function Cart() {
       <Header />
       <div className="cart-container">
         <div className="products-table">
-          <Table sx={{ margin: "10rem 0 5rem 0" }}>
-            <TableHead sx={{ backgroundColor: "#9EB23B" }}>
-              <TableRow>
-                <TableCell sx={{ color: "white" }}>Product</TableCell>
-                <TableCell sx={{ color: "white" }}>Price</TableCell>
-                <TableCell sx={{ color: "white" }}>Quantity</TableCell>
-                <TableCell sx={{ color: "white" }}>Total</TableCell>
-                <TableCell>
-                  <Button
-                    sx={[
-                      { color: "transparent", minWidth: 0 },
-                      { "&:hover": { backgroundColor: "transparent" } },
-                      { "&:active": { backgroundColor: "transparent" } },
-                    ]}
-                    onClick={() => {
-                      localStorage.setItem("cartItems", 0);
-                      let newCart = JSON.parse(
-                        localStorage.getItem("currentCart")
-                      );
-                      newCart.splice(0, newCart.length);
-                      localStorage.setItem(
-                        "currentCart",
-                        JSON.stringify(newCart)
-                      );
-                      window.location.reload();
-                    }}
-                  >
-                    <ClearIcon sx={{ color: "white" }} />
-                  </Button>
-                </TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {currentCart.map((product, key) => {
-                return (
-                  <CartItem
-                    key={key}
-                    i={key}
-                    product={product.product}
-                    img={product.img}
-                    price={
-                      product.promo
-                        ? parseFloat(product.promo).toFixed(2)
-                        : parseFloat(product.price).toFixed(2)
-                    }
-                    qtd={parseFloat(product.qtd)}
-                  />
-                );
-              })}
-            </TableBody>
-          </Table>
+          <TableContainer>
+            <Table>
+              <TableHead sx={{ backgroundColor: "#9EB23B" }}>
+                <TableRow>
+                  <TableCell sx={{ color: "white", fontWeight: "bold" }}>
+                    Product
+                  </TableCell>
+                  <TableCell sx={{ color: "white", fontWeight: "bold" }}>
+                    Price
+                  </TableCell>
+                  <TableCell sx={{ color: "white", fontWeight: "bold" }}>
+                    Quantity
+                  </TableCell>
+                  <TableCell sx={{ color: "white", fontWeight: "bold" }}>
+                    Total
+                  </TableCell>
+                  <TableCell>
+                    <Button
+                      sx={[
+                        { color: "transparent", minWidth: 0 },
+                        { "&:hover": { backgroundColor: "transparent" } },
+                        { "&:active": { backgroundColor: "transparent" } },
+                      ]}
+                      onClick={() => {
+                        localStorage.setItem("cartItems", 0);
+                        let newCart = JSON.parse(
+                          localStorage.getItem("currentCart")
+                        );
+                        newCart.splice(0, newCart.length);
+                        localStorage.setItem(
+                          "currentCart",
+                          JSON.stringify(newCart)
+                        );
+                        window.location.reload();
+                      }}
+                    >
+                      <ClearIcon sx={{ color: "white" }} />
+                    </Button>
+                  </TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {currentCart.map((product, key) => {
+                  return (
+                    <CartItem
+                      key={key}
+                      i={key}
+                      product={product.product}
+                      img={product.img}
+                      price={
+                        product.promo
+                          ? parseFloat(product.promo).toFixed(2)
+                          : parseFloat(product.price).toFixed(2)
+                      }
+                      qtd={parseFloat(product.qtd)}
+                    />
+                  );
+                })}
+              </TableBody>
+            </Table>
+          </TableContainer>
         </div>
         <div className="order-section">
           <div className="order-summary">
