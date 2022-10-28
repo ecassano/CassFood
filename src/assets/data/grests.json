@@ -128,17 +128,35 @@
     {
         "name": "The Capital Grille",
         "category": "Steakhouse",
-        "logo": "./grimages/capitalgrillelogo.png"
+        "logo": "./grimages/capitalgrillelogo.png",
+        "bannerImage": "https://www.mallatmillenia.com/wp-content/uploads/2018/10/Storefront-THE-CAPITAL-GRILLE_1200x601_acf_cropped-2.jpg",
+        "grade": "4.8",
+        "minimumOrder": "50.00",
+        "menu": {
+
+        }
     },
     {
         "name": "Morton's",
         "category": "Steakhouse",
-        "logo": "./grimages/mortonslogo.png"
+        "logo": "./grimages/mortonslogo.png",
+        "bannerImage": "https://movingtoorlando.com/wp-content/uploads/2020/05/IMG_4291.jpg",
+        "grade": "4.9",
+        "minimumOrder": "50.00",
+        "menu": {
+
+        }
     },
     {
         "name": "Palm",
         "category": "Italian",
-        "logo": "./grimages/palmlogo.png"
+        "logo": "./grimages/palmlogo.png",
+        "bannerImage": "https://orlandoinformer.com/wp-content/uploads/2011/06/oi-hard-rock-hotel-orlando-the-palm-restaurant-355.jpg",
+        "grade": "4.6",
+        "minimumOrder": "40.00",
+        "menu": {
+
+        }
     },
     {
         "name": "Maggiano's",

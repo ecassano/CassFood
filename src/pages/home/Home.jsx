@@ -17,7 +17,7 @@ import promo3 from "../../assets/images/promo3.png";
 import ilustration1 from "../../assets/images/undraw_on_the_way_re_swjt.svg";
 import ilustration2 from "../../assets/images/undraw_online_groceries_a02y.svg";
 import LocationOnOutlined from "@mui/icons-material/LocationOnOutlined";
-import Button from "@mui/material/Button";
+import { Button, Grid, TextField, InputAdornment } from "@mui/material";
 import AlertDialog from "../../components/Dialog";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import dataRestaurants from "../../assets/data/grests.json";
@@ -47,7 +47,7 @@ export default function Home() {
               <LocationOnOutlined
                 sx={{
                   color: "#9EB23B",
-                  fontSize: "1.2rem",
+                  fontSize: "clamp(1rem, 1.5vw, 2rem)",
                 }}
               />
             </button>
@@ -56,7 +56,7 @@ export default function Home() {
               sx={[
                 {
                   padding: ".5rem",
-                  marginLeft: "1rem",
+                  marginLeft: ".5rem",
                   backgroundColor: "#9EB23B",
                   color: "white",
                   width: "10%",

@@ -9,13 +9,31 @@ const Home = lazy(() => {
     resolve(import("./pages/home/Home"));
   });
 });
-const Login = lazy(() => import("./pages/login/Login"));
-const Register = lazy(() => import("./pages/register/Register"));
-// const Catalog = lazy(() => import("./pages/"));
-const Cart = lazy(() => import("./pages/cart/Cart"));
-const Checkout = lazy(() => import("./pages/checkout/Checkout"));
-const Restaurant = lazy(() => import("./pages/restaurant/Restaurant"));
-// const NotFound = lazy(() => import("./pages/login"));
+const Login = lazy(() => {
+  return new Promise((resolve) => {
+    resolve(import("./pages/login/Login"));
+  });
+});
+const Register = lazy(() => {
+  return new Promise((resolve) => {
+    resolve(import("./pages/register/Register"));
+  });
+});
+const Cart = lazy(() => {
+  return new Promise((resolve) => {
+    resolve(import("./pages/cart/Cart"));
+  });
+});
+const Checkout = lazy(() => {
+  return new Promise((resolve) => {
+    resolve(import("./pages/checkout/Checkout"));
+  });
+});
+const Restaurant = lazy(() => {
+  return new Promise((resolve) => {
+    resolve(import("./pages/restaurant/Restaurant"));
+  });
+});
 
 function App() {
   return (
@@ -28,8 +46,8 @@ function App() {
               top: "50%",
               left: "50%",
               transform: "translate(-50%, -50%)",
+              color: "#9EB23B",
             }}
-            color="success"
           />
         }
       >
@@ -48,6 +66,16 @@ function App() {
             exact
             path="/cassfoodthecapitalgrille"
             element={<Restaurant data={dataRests[1]} />}
+          />
+          <Route
+            exact
+            path="/cassfoodmortons"
+            element={<Restaurant data={dataRests[2]} />}
+          />
+          <Route
+            exact
+            path="/cassfoodpalm"
+            element={<Restaurant data={dataRests[3]} />}
           />
           <Route
             exact
