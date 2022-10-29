@@ -1,5 +1,5 @@
 import "./App.css";
-import { lazy, Suspense, useEffect } from "react";
+import { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { CircularProgress } from "@mui/material";
 import dataRests from "./assets/data/grests.json";
@@ -63,6 +63,9 @@ function App() {
           <Route exact path="/cart" element={<Cart />} />
           <Route exact path="/checkout" element={<Checkout />} />
           <Route exact path="*" element={<NotFound />} />
+          {/* {dataRests.map((rest, i)=>{
+            return <Route path={`/${rest.name.}`} element={<Produto data={rest}/>}/>
+          })} */}
           <Route
             exact
             path="/cassfoodwendys"
@@ -87,6 +90,31 @@ function App() {
             exact
             path="cassfoodmaggianos"
             element={<Restaurant data={dataRests[4]} />}
+          />
+          <Route
+            exact
+            path="cassfoodbubbagump"
+            element={<Restaurant data={dataRests[5]} />}
+          />
+          <Route
+            exact
+            path="cassfoodolivegarden"
+            element={<Restaurant data={dataRests[6]} />}
+          />
+          <Route
+            exact
+            path="cassfoodmcdonalds"
+            element={<Restaurant data={dataRests[7]} />}
+          />
+          <Route
+            exact
+            path="cassfoodredlobster"
+            element={<Restaurant data={dataRests[8]} />}
+          />
+          <Route
+            exact
+            path="cassfoodcamilas"
+            element={<Restaurant data={dataRests[9]} />}
           />
         </Routes>
       </Suspense>

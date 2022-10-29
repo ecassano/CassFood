@@ -297,26 +297,56 @@
     {
         "name": "Bubba Gump",
         "category": "Seafood",
-        "logo": "./grimages/bubbagumplogo.png"
+        "logo": "./grimages/bubbagumplogo.png",
+        "bannerImage": "https://images.getbento.com/accounts/976b73f507c1a13d24aed87f7c059f61/media/images/28713_NEF1923.jpg?w=1200&fit=crop&auto=compress,format&h=600",
+        "grade": "4.3",
+        "minimumOrder": "30.00",
+        "menu": {
+
+        }
     },
     {
         "name": "Olive Garden",
         "category": "Italian",
-        "logo": "./grimages/olivegardenlogo.png"
+        "logo": "./grimages/olivegardenlogo.png",
+        "bannerImage": "https://viagemdisney.com.br/wp-content/uploads/2019/05/Restaurante-Olive-Garden-Orlando.png",
+        "grade": "4.2",
+        "minimumOrder": "20.00",
+        "menu": {
+
+        }
     },
     {
-        "name": "Mcdonalds's",
+        "name": "Mcdonald's",
         "category": "Fast food",
-        "logo": "./grimages/mcdonaldslogo.jpeg"
+        "logo": "./grimages/mcdonaldslogo.jpeg",
+        "bannerImage": "https://assets.simpleviewinc.com/simpleview/image/fetch/c_limit,q_75,w_1200/https://assets.simpleviewinc.com/simpleview/image/upload/crm/visitflorida/29719_lg1tk88ca69usb3zmv40dnykdeyn3kie_f62bcc51-5056-a36a-0ba78adc8f01a2a5.jpg",
+        "grade": "4.9",
+        "minimumOrder": "50.00",
+        "menu": {
+
+        }
     },
     {
         "name": "Red Lobster",
         "category": "Seafood",
-        "logo": "./grimages/redlobsterlogo.svg"
+        "logo": "./grimages/redlobsterlogo.svg",
+        "bannerImage": "https://c8y3s8d4.stackpathcdn.com/wp-content/uploads/2016/06/red-lobster-kissimmee.png",
+        "grade": "4.9",
+        "minimumOrder": "50.00",
+        "menu": {
+
+        }
     },
     {
         "name": "Camila's",
         "category": "Brazilian",
-        "logo": "./grimages/camilaslogo.jpeg"
+        "logo": "./grimages/camilaslogo.jpeg",
+        "bannerImage": "http://orlandonopapo.com.br/wp-content/uploads/2016/05/camilas-4.jpg",
+        "grade": "4.9",
+        "minimumOrder": "50.00",
+        "menu": {
+
+        }
     }
 ]

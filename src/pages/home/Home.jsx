@@ -17,7 +17,7 @@ import promo3 from "../../assets/images/promo3.png";
 import ilustration1 from "../../assets/images/undraw_on_the_way_re_swjt.svg";
 import ilustration2 from "../../assets/images/undraw_online_groceries_a02y.svg";
 import LocationOnOutlined from "@mui/icons-material/LocationOnOutlined";
-import { Button, Grid, TextField, InputAdornment } from "@mui/material";
+import { Button } from "@mui/material";
 import AlertDialog from "../../components/Dialog";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import dataRestaurants from "../../assets/data/grests.json";

@@ -49,7 +49,9 @@ function log() {
     window.localStorage.getItem("password") === userPassword
   ) {
     window.localStorage.setItem("logged", true);
-    window.location.href = "/";
+    setTimeout(() => {
+      window.location.href = "/";
+    }, 500);
   }
 }
 

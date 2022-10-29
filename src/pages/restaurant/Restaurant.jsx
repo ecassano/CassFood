@@ -1,7 +1,7 @@
 import * as React from "react";
 import "./restaurant.css";
 import logo from "../../assets/images/logocass.png";
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useState } from "react";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/footer";

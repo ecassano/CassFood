@@ -31,7 +31,6 @@ function CartItem({ i, product, img, price, qtd, setUpdate }) {
 
   const [counter, setCounter] = useState(qtd);
 
-  // if (counter > 0) {
   return (
     <TableRow className="table-rows" sx={{ overflowX: "auto" }}>
       <TableCell sx={{ minWidth: "200px" }}>
@@ -95,7 +94,6 @@ function CartItem({ i, product, img, price, qtd, setUpdate }) {
             let currentCart = JSON.parse(localStorage.getItem("currentCart"));
             currentCart[i].qtd--;
             localStorage.setItem("currentCart", JSON.stringify(currentCart));
-            // window.location.reload();
             setUpdate(updateNumber);
           }}
         >
@@ -169,16 +167,15 @@ function CartItem({ i, product, img, price, qtd, setUpdate }) {
     </TableRow>
   );
 }
-// }
 
 export default function Cart() {
   let currentCart = JSON.parse(localStorage.getItem("currentCart"));
 
   const [update, setUpdate] = useState("");
 
-  useEffect(() => {
-    verifyLogin();
-  }, []);
+  // useEffect(() => {
+  //   verifyLogin();
+  // }, []);
 
   return (
     <>
