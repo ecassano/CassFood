@@ -63,59 +63,18 @@ function App() {
           <Route exact path="/cart" element={<Cart />} />
           <Route exact path="/checkout" element={<Checkout />} />
           <Route exact path="*" element={<NotFound />} />
-          {/* {dataRests.map((rest, i)=>{
-            return <Route path={`/${rest.name.}`} element={<Produto data={rest}/>}/>
-          })} */}
-          <Route
-            exact
-            path="/cassfoodwendys"
-            element={<Restaurant data={dataRests[0]} />}
-          />
-          <Route
-            exact
-            path="/cassfoodthecapitalgrille"
-            element={<Restaurant data={dataRests[1]} />}
-          />
-          <Route
-            exact
-            path="/cassfoodmortons"
-            element={<Restaurant data={dataRests[2]} />}
-          />
-          <Route
-            exact
-            path="/cassfoodpalm"
-            element={<Restaurant data={dataRests[3]} />}
-          />
-          <Route
-            exact
-            path="cassfoodmaggianos"
-            element={<Restaurant data={dataRests[4]} />}
-          />
-          <Route
-            exact
-            path="cassfoodbubbagump"
-            element={<Restaurant data={dataRests[5]} />}
-          />
-          <Route
-            exact
-            path="cassfoodolivegarden"
-            element={<Restaurant data={dataRests[6]} />}
-          />
-          <Route
-            exact
-            path="cassfoodmcdonalds"
-            element={<Restaurant data={dataRests[7]} />}
-          />
-          <Route
-            exact
-            path="cassfoodredlobster"
-            element={<Restaurant data={dataRests[8]} />}
-          />
-          <Route
-            exact
-            path="cassfoodcamilas"
-            element={<Restaurant data={dataRests[9]} />}
-          />
+          {dataRests.map((rest, i) => {
+            return (
+              <Route
+                key={i}
+                exact
+                path={`/cassfood${rest.name
+                  .replace(/[^a-zA-Z0-9]/g, "")
+                  .toLocaleLowerCase()}`}
+                element={<Restaurant data={rest} />}
+              />
+            );
+          })}
         </Routes>
       </Suspense>
     </Router>
