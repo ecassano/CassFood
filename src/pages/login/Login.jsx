@@ -67,6 +67,7 @@ export default function Login() {
 
   return (
     <Grid
+      className="grid-responsive-login"
       container
       spacing={2}
       style={{
@@ -79,7 +80,7 @@ export default function Login() {
         style={{
           width: "100%",
           textAlign: "center",
-          marginTop: "auto",
+          marginTop: "20%",
         }}
       >
         <img id="logo-login" src={logo} alt="Logo" />

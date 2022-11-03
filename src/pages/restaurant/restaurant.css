@@ -167,6 +167,11 @@
     margin: 0 auto;
 }
 
+.dialog-content-dish{
+    display: flex;
+    align-items: center
+}
+
 @media screen and (max-width: 767px){
     .restaurant-single-banner{
         height: 20vh;
@@ -210,12 +215,16 @@
     }
 
     .button-dishes{
-        border-top: 1px solid #f2f2f2;
-        border-bottom: 1px solid #f2f2f2;
-        border-left: none;
-        border-right: none;
-        box-shadow: none;
-        border-radius: 0;
-        padding: 10px 0;
+        border-top: 1px solid #f2f2f2 !important;
+        border-bottom: 1px solid #f2f2f2 !important;
+        border-left: none !important;
+        border-right: none !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        padding: 10px 0 !important;
+    }
+
+    .dialog-content-dish{
+        flex-direction: column;
     }
 }

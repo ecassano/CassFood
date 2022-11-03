@@ -76,7 +76,7 @@ export default function Register() {
   const [passwordConfirm, setStatePasswordConfirm] = useState("");
 
   return (
-    <Grid container spacing={2} style={{ height: "100vh" }}>
+    <Grid className="grid-responsive-register" container spacing={2}>
       <Link
         to="/"
         style={{

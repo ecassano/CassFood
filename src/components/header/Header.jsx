@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { styled } from "@mui/material/styles";
 import logo from "../../assets/images/logocass.png";
-import MenuMobile from "../../components/mobilemenu/MenuMobile";
+import MenuMobile from "../mobilemenu/MenuMobile";
 import IconButton from "@mui/material/IconButton";
 import Badge from "@mui/material/Badge";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";

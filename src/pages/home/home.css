@@ -32,17 +32,13 @@
 .first-section .span-input{
     display: flex;
     justify-content: center;
-    border-radius: 10px;
 }
 
 .first-section .span-input input{
-    border-style: solid;
-    border-left: none;
-    width: 45%;
-    padding: .7rem 0 .7rem 0;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border-color: #E0DECA;
+    border: none;
+    width: 50%;
+    border-radius: 5px;
+    flex: 9;
     outline: none;
 }
 
@@ -51,16 +47,12 @@
 }
 
 #icon{
-    width: 5%;
+    border: none;
+    flex: 1;
     background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-style: solid;
-    border-right: none;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-color: #E0DECA;
 }
 
 .boxes{
@@ -215,6 +207,11 @@
 }
 
 @media screen and (max-width: 580px){
+
+    .button-more{
+        margin: 1rem auto 0 auto;
+    }
+
     .first-section{
         margin-top: 9rem;
     }

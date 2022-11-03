@@ -6,8 +6,10 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import { useMediaQuery } from "@mui/material";
+import { useTheme } from "@emotion/react";
 
-export default function AlertDialog({ bgColor, icon }) {
+export default function AlertDialog() {
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -21,12 +23,12 @@ export default function AlertDialog({ bgColor, icon }) {
   return (
     <div>
       <Button
+        className="button-more"
         variant="outlined"
         sx={[
           {
             color: "white",
             backgroundColor: "rgba(0, 0, 0, 0.3)",
-            marginTop: "1rem",
             textTransform: "capitalize",
             border: "none",
             fontWeight: "bold",

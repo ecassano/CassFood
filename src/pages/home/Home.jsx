@@ -42,16 +42,25 @@ export default function Home() {
         <div className="first-section">
           <h1>If it's food we got it</h1>
           <p>What you want we have it. Order from where you are.</p>
-          <span className="span-input">
-            <button id="icon" style={{ padding: "0 .5rem" }} disabled>
-              <LocationOnOutlined
-                sx={{
-                  color: "#9EB23B",
-                  fontSize: "clamp(1rem, 1.5vw, 2rem)",
-                }}
-              />
-            </button>
-            <input type="text" placeholder="Where are you?" />
+          <div className="span-input">
+            <span
+              style={{
+                display: "flex",
+                width: "50%",
+                border: "1px solid #E0DECA",
+                borderRadius: "5px",
+              }}
+            >
+              <button id="icon" style={{ padding: "0 .5rem" }} disabled>
+                <LocationOnOutlined
+                  sx={{
+                    color: "#9EB23B",
+                    fontSize: "clamp(1rem, 1.5vw, 2rem)",
+                  }}
+                />
+              </button>
+              <input type="text" placeholder="Where are you?" />
+            </span>
             <Button
               sx={[
                 {
@@ -73,7 +82,7 @@ export default function Home() {
             >
               Send
             </Button>
-          </span>
+          </div>
           <div className="boxes">
             <div className="box">
               <h2>Restaurant</h2>

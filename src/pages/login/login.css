@@ -16,10 +16,11 @@
     }
 
     #logo-login{
-        position: relative;
+        left: calc(50% - 2.5rem);
     }
 
-    .css-mhc70k-MuiGrid-root{
-        align-items: flex-start !important;
+    .grid-responsive-login{
+        margin-top: 1.5rem;
+        height: fit-content !important;
     }
 }

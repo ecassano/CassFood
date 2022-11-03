@@ -16,6 +16,11 @@
     }
 
     #logo-register{
-        position: relative;
+        left: calc(50% - 2.5rem);
+    }
+
+    .grid-responsive-register{
+        margin-top: 6rem;
+        height: fit-content !important;
     }
 }

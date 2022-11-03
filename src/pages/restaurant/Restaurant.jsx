@@ -88,7 +88,7 @@ export default function Restaurant({ data }) {
           >
             {dishPageTitle}
           </DialogTitle>
-          <DialogContent sx={{ display: "flex", alignItems: "center" }}>
+          <DialogContent className="dialog-content-dish">
             <img
               className="dishPage-img"
               src={dishPageImg}
