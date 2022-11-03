@@ -184,9 +184,8 @@
         padding: 1rem .75rem;
     }
 
-    .box .css-1x05bby-MuiButtonBase-root-MuiButton-root{
-        margin: 20px 0 5px 0;
-        font-size: smaller;
+    .button-more{
+        margin: 1rem auto 0 auto !important;
     }
 
     .promo-banner-single{
@@ -208,10 +207,6 @@
 
 @media screen and (max-width: 580px){
 
-    .button-more{
-        margin: 1rem auto 0 auto;
-    }
-
     .first-section{
         margin-top: 9rem;
     }
@@ -219,11 +214,6 @@
     .boxes{
         margin: 2rem 0 3rem 0;
      }
-
-    .box .css-1x05bby-MuiButtonBase-root-MuiButton-root{
-        margin: 20px 0 5px 0;
-        font-size: x-small;
-    }
 
     .promo-banners{
         margin-bottom: 3rem;
