@@ -6,6 +6,11 @@
     top: 2.5%;
 }
 
+#logo-link{
+    width: 100%;
+    text-align: center;
+}
+
 #ilustration-register{
     height: 100vh;
 }
@@ -22,5 +27,9 @@
     .grid-responsive-login{
         margin-top: 1.5rem;
         height: fit-content !important;
+    }
+
+    #logo-link{
+        margin-top: 20%;
     }
 }

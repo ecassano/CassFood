@@ -75,14 +75,7 @@ export default function Login() {
         alignItems: "center",
       }}
     >
-      <Link
-        to="/"
-        style={{
-          width: "100%",
-          textAlign: "center",
-          marginTop: "20%",
-        }}
-      >
+      <Link id="logo-link" to="/">
         <img id="logo-login" src={logo} alt="Logo" />
       </Link>
       <Grid
